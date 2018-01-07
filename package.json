@@ -1,6 +1,6 @@
 {
   "name": "jest-auto-snapshots",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Fully automated Jest snapshot tests for React components",
   "main": "./dist/index.js",
   "repository": "git@github.com:icd2k3/jest-auto-snapshots.git",
@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "caller-callsite": "^2.0.0",
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "react-docgen": "^2.20.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -41,7 +42,6 @@
     "jest": "^21.2.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-docgen": "^2.20.0",
     "react-dom": "^16.2.0",
     "recompose": "^0.26.0"
   },
