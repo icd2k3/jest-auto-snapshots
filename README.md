@@ -1,4 +1,10 @@
-Automatically generate prop fixtures and snapshot tests for your React components
+<p align="center">
+  Automatically generate prop fixtures and snapshot tests for your React components
+ </p>
+
+<p align="center">
+  <a href="https://travis-ci.org/icd2k3/jest-auto-snapshots" target="_blank"><img src="https://travis-ci.org/icd2k3/jest-auto-snapshots.svg?branch=master" /></a>
+</p>
 
 ```js
 import snap from 'jest-auto-snapshots';
