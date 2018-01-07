@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > ClassComponent Matches snapshot when boolean prop "sayHello" is set to: "false": when boolean prop "sayHello" is set to: "false" 1`] = `
+<div>
+  <span>
+    Goodbye
+  </span>
+</div>
+`;
+
+exports[`jest-auto-snapshots > ClassComponent Matches snapshot when passed only required props: when passed only required props 1`] = `
+<div>
+  <span>
+    Hello
+  </span>
+</div>
+`;
+
 exports[`when boolean prop "sayHello" is set to: "false" 1`] = `
 <div>
   <span>

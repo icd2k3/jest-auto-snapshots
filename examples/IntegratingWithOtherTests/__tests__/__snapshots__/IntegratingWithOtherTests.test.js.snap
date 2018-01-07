@@ -15,6 +15,21 @@ exports[`IntegratingWithOtherTests When button is clicked Should add a click 1`]
 </div>
 `;
 
+exports[`IntegratingWithOtherTests jest-auto-snapshots > IntegratingWithOtherTests Matches snapshot when passed only required props: when passed only required props 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Click Me
+  </button>
+  jest-auto-snapshots String Fixture
+  :
+  <span>
+    0
+  </span>
+</div>
+`;
+
 exports[`when passed only required props 1`] = `
 <div>
   <button

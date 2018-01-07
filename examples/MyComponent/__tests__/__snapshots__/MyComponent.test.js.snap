@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > MyComponent Matches snapshot when boolean prop "booleanProp" is set to: "false": when boolean prop "booleanProp" is set to: "false" 1`] = `
+<div>
+  jest-auto-snapshots String Fixture
+  <NodeFixture />
+</div>
+`;
+
+exports[`jest-auto-snapshots > MyComponent Matches snapshot when passed all props: when passed all props 1`] = `
+<div>
+  <span>
+    Hello
+  </span>
+  jest-auto-snapshots String Fixture
+  <NodeFixture />
+</div>
+`;
+
+exports[`jest-auto-snapshots > MyComponent Matches snapshot when passed only required props: when passed only required props 1`] = `
+<div>
+  jest-auto-snapshots String Fixture
+</div>
+`;
+
 exports[`when boolean prop "booleanProp" is set to: "false" 1`] = `
 <div>
   jest-auto-snapshots String Fixture

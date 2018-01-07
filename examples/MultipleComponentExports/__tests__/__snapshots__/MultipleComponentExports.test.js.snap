@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > ComponentOne Matches snapshot when passed only required props: when passed only required props 1`] = `
+<span>
+  jest-auto-snapshots String Fixture
+</span>
+`;
+
+exports[`jest-auto-snapshots > ComponentTwo Matches snapshot when passed only required props: when passed only required props 1`] = `
+<span>
+  1
+</span>
+`;
+
 exports[`when passed only required props 1`] = `
 <span>
   jest-auto-snapshots String Fixture
