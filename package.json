@@ -2,7 +2,7 @@
   "name": "jest-auto-snapshots",
   "version": "0.1.0",
   "description": "Fully automated Jest snapshot tests for React components",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "repository": "git@github.com:icd2k3/jest-auto-snapshots.git",
   "author": "JUSTIN SCHRADER <icd2k3@gmail.com>",
   "license": "MIT",
@@ -44,6 +44,8 @@
     "recompose": "^0.26.0"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "babel src --out-dir dist",
     "install-hooks": "git config core.hooksPath .githooks",
     "test": "NODE_ENV=test && ./node_modules/.bin/jest --config=./jest.config.js --verbose",
     "lint": "./node_modules/.bin/eslint './src/**/*.js' './examples/**/*.js' './examples/**/*.jsx'",
