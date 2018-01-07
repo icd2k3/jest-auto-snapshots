@@ -15,19 +15,3 @@ exports[`jest-auto-snapshots > ClassComponent Matches snapshot when passed only 
   </span>
 </div>
 `;
-
-exports[`when boolean prop "sayHello" is set to: "false" 1`] = `
-<div>
-  <span>
-    Goodbye
-  </span>
-</div>
-`;
-
-exports[`when passed only required props 1`] = `
-<div>
-  <span>
-    Hello
-  </span>
-</div>
-`;

@@ -11,15 +11,3 @@ exports[`jest-auto-snapshots > ComponentTwo Matches snapshot when passed only re
   1
 </span>
 `;
-
-exports[`when passed only required props 1`] = `
-<span>
-  jest-auto-snapshots String Fixture
-</span>
-`;
-
-exports[`when passed only required props 2`] = `
-<span>
-  1
-</span>
-`;

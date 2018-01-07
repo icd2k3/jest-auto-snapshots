@@ -5,9 +5,3 @@ exports[`jest-auto-snapshots > TestNextToComponent Matches snapshot when passed 
   jest-auto-snapshots String Fixture
 </div>
 `;
-
-exports[`when passed all props 1`] = `
-<div>
-  jest-auto-snapshots String Fixture
-</div>
-`;

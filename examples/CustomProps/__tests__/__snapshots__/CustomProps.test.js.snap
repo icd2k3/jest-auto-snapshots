@@ -5,9 +5,3 @@ exports[`jest-auto-snapshots > CustomProps Matches snapshot when passed all prop
   customproptest
 </div>
 `;
-
-exports[`when passed all props 1`] = `
-<div>
-  customproptest
-</div>
-`;

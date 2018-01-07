@@ -29,18 +29,3 @@ exports[`IntegratingWithOtherTests jest-auto-snapshots > IntegratingWithOtherTes
   </span>
 </div>
 `;
-
-exports[`when passed only required props 1`] = `
-<div>
-  <button
-    onClick={[Function]}
-  >
-    Click Me
-  </button>
-  jest-auto-snapshots String Fixture
-  :
-  <span>
-    0
-  </span>
-</div>
-`;

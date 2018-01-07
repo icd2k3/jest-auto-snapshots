@@ -22,26 +22,3 @@ exports[`jest-auto-snapshots > MyComponent Matches snapshot when passed only req
   jest-auto-snapshots String Fixture
 </div>
 `;
-
-exports[`when boolean prop "booleanProp" is set to: "false" 1`] = `
-<div>
-  jest-auto-snapshots String Fixture
-  <NodeFixture />
-</div>
-`;
-
-exports[`when passed all props 1`] = `
-<div>
-  <span>
-    Hello
-  </span>
-  jest-auto-snapshots String Fixture
-  <NodeFixture />
-</div>
-`;
-
-exports[`when passed only required props 1`] = `
-<div>
-  jest-auto-snapshots String Fixture
-</div>
-`;
