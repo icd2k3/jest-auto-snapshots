@@ -1,8 +1,8 @@
 {
   "name": "jest-auto-snapshots",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Fully automated Jest snapshot tests for React components",
-  "main": "index.js",
+  "main": "./src/index.js",
   "repository": "git@github.com:icd2k3/jest-auto-snapshots.git",
   "author": "JUSTIN SCHRADER <icd2k3@gmail.com>",
   "license": "MIT",
