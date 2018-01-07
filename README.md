@@ -6,8 +6,10 @@ import MyComponent from '../MyComponent';
 
 snap(MyComponent);
 ```
+
 ↓
-IMG here
+
+![ex](https://www.dropbox.com/s/dqzdam8st4yfuxg/Screenshot%202018-01-07%2011.46.34.png?raw=1)
 
 ## Why?
 > [Snapshot tests](https://facebook.github.io/jest/docs/en/snapshot-testing.html) are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
