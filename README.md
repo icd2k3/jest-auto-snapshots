@@ -99,7 +99,7 @@ exports[`when passed only required props 1`] = `
 ```
 
 ## Advanced Examples
-For advanced examples highlighting different use cases, please check out the [examples directory](https://github.com/icd2k3/jest-automated-snapshots/tree/master/examples)
+For advanced examples highlighting different use cases, please check out the [examples directory](https://github.com/icd2k3/jest-auto-snapshots/tree/master/examples)
 
 ## API
 ```js
