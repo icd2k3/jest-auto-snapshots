@@ -1,0 +1,14 @@
+{
+  "presets": ["es2015", "react", "stage-1"],
+  "env": {
+    "test": {
+      "presets": ["es2015", "react", "stage-1"],
+      "plugins": [
+        "babel-plugin-dynamic-import-node",
+        ["module-alias", [
+          { "src": "./src", "expose": "jest-auto-snapshots" },
+        ]],
+      ]
+    }
+  }
+}

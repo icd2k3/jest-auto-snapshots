@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when passed only required props 1`] = `
+<span>
+  jest-auto-snapshots String Fixture
+</span>
+`;
+
+exports[`when passed only required props 2`] = `
+<span>
+  1
+</span>
+`;

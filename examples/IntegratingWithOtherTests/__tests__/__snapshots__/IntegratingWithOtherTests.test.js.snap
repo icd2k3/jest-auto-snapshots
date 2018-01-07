@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IntegratingWithOtherTests When button is clicked Should add a click 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Click Me
+  </button>
+  label
+  :
+  <span>
+    1
+  </span>
+</div>
+`;
+
+exports[`when passed only required props 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Click Me
+  </button>
+  jest-auto-snapshots String Fixture
+  :
+  <span>
+    0
+  </span>
+</div>
+`;

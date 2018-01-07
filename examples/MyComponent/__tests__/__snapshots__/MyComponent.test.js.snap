@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when boolean prop "booleanProp" is set to: "false" 1`] = `
+<div>
+  jest-auto-snapshots String Fixture
+  <NodeFixture />
+</div>
+`;
+
+exports[`when passed all props 1`] = `
+<div>
+  <span>
+    Hello
+  </span>
+  jest-auto-snapshots String Fixture
+  <NodeFixture />
+</div>
+`;
+
+exports[`when passed only required props 1`] = `
+<div>
+  jest-auto-snapshots String Fixture
+</div>
+`;

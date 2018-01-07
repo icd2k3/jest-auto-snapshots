@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when boolean prop "sayHello" is set to: "false" 1`] = `
+<div>
+  <span>
+    Goodbye
+  </span>
+</div>
+`;
+
+exports[`when passed only required props 1`] = `
+<div>
+  <span>
+    Hello
+  </span>
+</div>
+`;

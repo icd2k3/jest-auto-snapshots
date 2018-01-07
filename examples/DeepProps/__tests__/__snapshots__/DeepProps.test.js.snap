@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when array prop "users" has one item: "[object Object]" 1`] = `
+<div>
+  <div
+    key="jest-auto-snapshots String Fixture"
+  >
+    <h1>
+      jest-auto-snapshots String Fixture
+       
+      jest-auto-snapshots String Fixture
+    </h1>
+    <div
+      key="1"
+    >
+      <h2>
+        1
+      </h2>
+      <span>
+        $
+        jest-auto-snapshots String Fixture
+      </span>
+    </div>
+  </div>
+  <span>
+    jest-auto-snapshots String Fixture
+  </span>
+</div>
+`;
+
+exports[`when array prop "users" is an empty array: "[]" 1`] = `
+<div>
+  <span>
+    jest-auto-snapshots String Fixture
+  </span>
+</div>
+`;
+
+exports[`when passed all props 1`] = `
+<div>
+  <div
+    key="jest-auto-snapshots String Fixture"
+  >
+    <h1>
+      jest-auto-snapshots String Fixture
+       
+      jest-auto-snapshots String Fixture
+    </h1>
+    <div
+      key="1"
+    >
+      <h2>
+        1
+      </h2>
+      <span>
+        $
+        jest-auto-snapshots String Fixture
+      </span>
+    </div>
+  </div>
+  <span>
+    jest-auto-snapshots String Fixture
+  </span>
+</div>
+`;
+
+exports[`when passed only required props 1`] = `
+<div>
+  <div
+    key="jest-auto-snapshots String Fixture"
+  >
+    <h1>
+      jest-auto-snapshots String Fixture
+       
+      jest-auto-snapshots String Fixture
+    </h1>
+    <div
+      key="1"
+    >
+      <h2>
+        1
+      </h2>
+      <span>
+        $
+        jest-auto-snapshots String Fixture
+      </span>
+    </div>
+  </div>
+  <span />
+</div>
+`;
