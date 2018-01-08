@@ -27,7 +27,7 @@ snap(MyComponent);
 
 #### What this script does (or aspires to do):
 - Save time when writing simple A -> B rendering tests.
-- Automatically update, add, and remove tests when component props change.
+- Automatically update, add, and remove snapshot tests when component props change.
 - Ensure that all possible component rendering states are covered.
 
 #### What it doesn't do (but might in the future):
