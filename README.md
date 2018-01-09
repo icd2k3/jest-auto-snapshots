@@ -128,7 +128,7 @@ There are 2 ways to change configuration for the script. Either at the root leve
   /**
    * jest-auto-snapshots needs to parse the actual component file
    * in order to see which props it needs. By default, it expects
-   * your test file to be in a direftory next to your component. But
+   * your test file to be in a directory next to your component. But
    * if you prefer your tests to sit right nect to your component
    * (or any other location) you can override the default with `relativePath`
    */
