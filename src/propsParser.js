@@ -43,7 +43,7 @@ const propsParser = (componentName, config = {}) => {
     componentPropInfo = componentPropInfo.props;
   }
 
-  return Object.keys(componentPropInfo)
+  return Object.keys(componentPropInfo || {})
     .reduce((obj, key) => {
       const newObj = obj;
       const { type, required } = componentPropInfo[key];
