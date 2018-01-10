@@ -28,14 +28,21 @@ export const possibilities = (Component, allProps, key) => ({
 
 const tests = (Component, { required, optional }) => {
   const allProps = { ...required, ...optional };
+  const requiredKeys = Object.keys(required);
+  const optionalKeys = Object.keys(optional);
 
   describe(`jest-auto-snapshots > ${Component.name}`, () => {
     // snapshot test the component with ONLY required props, then with all props
-    if (Object.keys(required).length) {
-      shapshotTest(Component, required, 'when passed only required props');
-    }
-    if (Object.keys(optional).length) {
-      shapshotTest(Component, allProps, 'when passed all props');
+    if (!requiredKeys.length && !optionalKeys.length) {
+      // this component doesn't need (or have) props to render
+      shapshotTest(Component, {}, 'when rendered');
+    } else {
+      if (requiredKeys.length) {
+        shapshotTest(Component, required, 'when passed only required props');
+      }
+      if (optionalKeys.length) {
+        shapshotTest(Component, allProps, 'when passed all props');
+      }
     }
 
     // loop through each prop and test different possibilities
