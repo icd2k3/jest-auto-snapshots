@@ -2,8 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { set, get, NodeFixture } from '../configure.js';
 
-const defaultConfig = get();
-
 describe('configure', () => {
   describe('NodeFixture', () => {
     it('Should match snapshot', () => {
@@ -12,32 +10,27 @@ describe('configure', () => {
   });
 
   describe('set', () => {
-    it('Should set relativePath and extension correctly w/o fixtures', () => {
-      set({
-        relativePath: 'mock',
-        extension: 'js',
-      });
-      expect(get()).toEqual({
-        ...defaultConfig,
-        relativePath: 'mock',
-        extension: 'js',
-      });
-    });
-
     it('Should set fixtures correctly', () => {
       const config = get();
-      const newFixtures = {
+      const newFixturesByPropType = {
         mockCustomPropType: 'mock-new-fixture',
         string: 'mock-override-default-fixture',
       };
+      const newFixturesByPropKey = {
+        user: { name: 'guy' },
+      };
       set({
-        fixtures: newFixtures,
+        fixturesByPropType: newFixturesByPropType,
+        fixturesByPropKey: newFixturesByPropKey,
       });
       expect(get()).toEqual({
-        ...config,
-        fixtures: {
-          ...config.fixtures,
-          ...newFixtures,
+        fixturesByPropType: {
+          ...config.fixturesByPropType,
+          ...newFixturesByPropType,
+        },
+        fixturesByPropKey: {
+          ...config.fixturesByPropKey,
+          ...newFixturesByPropKey,
         },
       });
     });

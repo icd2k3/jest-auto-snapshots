@@ -13,7 +13,7 @@
 import snap from 'jest-auto-snapshots';
 import MyComponent from '../MyComponent';
 
-snap(MyComponent);
+snap(MyComponent, '../MyComponent.jsx');
 ```
 
 ↓
@@ -23,15 +23,18 @@ snap(MyComponent);
 ## Why?
 > [Snapshot tests](https://facebook.github.io/jest/docs/en/snapshot-testing.html) are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
 
-`jest` and `enzyme-to-json` are great tools, but writing tests for all the different possible rendering states and maintaining props is tedious and unnecessary. Really, we just want to know when & where a snapshot changes and if the change was intentional.
+`jest` and `enzyme-to-json` are great tools, but writing tests for all the different possible rendering states and maintaining props is tedious and unnecessary.
+
+Really, we just want to know when & where a component snapshot changes and if that change was intentional.
 
 #### What this script does (or aspires to do):
 - Save time when writing simple A -> B rendering tests.
 - Automatically update, add, and remove snapshot tests when component props change.
 - Ensure that all possible component rendering states are covered.
 
-#### What it doesn't do (but might in the future):
-- _Deeply_ test all prop possibilities nested in `arrays` or `shapes`. This would just create way to many tests and should be handled manually (or, better yet, strive to make your component props as flat as possible). I'm open to a settings option to allow for this in future iterations, though.
+#### What it doesn't do:
+- _Deeply_ test all prop possibilities nested in `arrays` or `shapes`. This would just create way to many snapshots and should be handled manually (or, better yet, strive to make your component props as flat as possible). I'm open to a settings option to allow for this in future iterations, though.
+- Test _functionality_ for you. You should still write manual tests for things like button clicks, component state changes, etc.
 - Save time _running_ tests. It's only supposed to save time _writing_ tests.
 
 ## How
@@ -106,42 +109,18 @@ For advanced examples highlighting different use cases, please check out the [ex
 ```js
 snap(
   component: <Component:required>,
-  config: <Object:optional>,
+  componentFilePath: <String:required>,  // jest-auto-snapshots needs to parse the component file itself to determine prop fixtures
+  config: <Object:optional>,             // optionally set fixtures for the component tests (see Config section below)
 );
 ```
 
 ## Config
 There are 2 ways to change configuration for the script. Either at the root level in your [jest setup file](https://facebook.github.io/jest/docs/en/configuration.html#setupfiles-array) or in each individual test. The params are the same for both:
 
-```js
-{
-  /**
-   * by default jest-auto-snapshots populates all fixtures for props like string, bool, shape, etc.
-   * but you can override those fixtures with your own, or support custom prop types.
-   */
-
-  fixtures: {
-    // propTypeName: propFixture,
-    // ...
-  },
-
-  /**
-   * jest-auto-snapshots needs to parse the actual component file
-   * in order to see which props it needs. By default, it expects
-   * your test file to be in a directory next to your component. But
-   * if you prefer your tests to sit right nect to your component
-   * (or any other location) you can override the default with `relativePath`
-   */
-
-  relativePath: '../',
-  
-  /**
-   *  optionally set the file extension for your component files (default is 'jsx')
-   */
-
-  extension: 'js',
-}
-```
+Key | Description | Defaults
+--- | --- | ---
+fixturesByPropKey | Inject component prop fixtures bassed on the prop _key_ | None
+fixturesByPropType | Inject component prop fixtures based on the prop _type_ | [see src/configure.js](https://github.com/icd2k3/jest-auto-snapshots/blob/master/src/configure.js). By default it covers all the core [propTypes](https://github.com/facebook/prop-types).
 
 #### Set Config at the Root Level
 In your [jest setup file](https://facebook.github.io/jest/docs/en/configuration.html#setupfiles-array):
@@ -150,12 +129,16 @@ In your [jest setup file](https://facebook.github.io/jest/docs/en/configuration.
 const jestAutoSnapshots = require('jest-auto-snapshots');
 
 jestAutoSnapshots.configure({
-  fixtures: {
-    customPropTypeExample: 'custom prop fixture example',
+  fixturesByPropType: {
+    customPropType: 'custom fixture',
   },
-  relativePath: './',
+  fixturesByPropKey: {
+    user: { name: 'Joe', age: 30 },
+  },
 });
 ```
+
+For the above example: `'custom fixture'` will be injected for _all_ components with `something: customPropType` in their `propTypes` object. And `{name: 'Joe', age: 30}` will be injected for _all_ components with `user: PropTypes.shape({ /* ... */ })` in their `propTypes` object.
 
 #### Set Config at the Test Level
 In your test file:
@@ -164,12 +147,14 @@ In your test file:
 import snap from 'jest-auto-snapshots';
 import CustomProps from '../CustomProps';
 
-snap(CustomProps, {
-  fixtures: {
-    customPropTypeExample: 'custom prop fixture example',
+snap(CustomProps, '../CustomProps.jsx', {
+  fixturesByPropType: {
+    customPropType: 'custom fixture',
   },
-  relativePath: './',
+  fixturesByPropKey: {
+    user: { name: 'Joe', age: 30 },
+  },
 });
 ```
 
-Note: any of these config options supplied _at the test level_ will _override_ any config settings from your [jest setup file](https://facebook.github.io/jest/docs/en/configuration.html#setupfiles-array).
+For the above example, these custom fixtures will _only_ be injected for the current test.

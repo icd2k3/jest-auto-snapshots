@@ -5,7 +5,8 @@ export const NodeFixture = () => createElement('span', {}, `${prepend} Node Fixt
 const stringFixture = `${prepend} String Fixture`;
 
 let config = {
-  fixtures: {
+  fixturesByPropKey: {},
+  fixturesByPropType: {
     string: stringFixture,
     bool: true,
     number: 1,
@@ -17,19 +18,21 @@ let config = {
     array: [stringFixture],
     object: { jest: stringFixture },
   },
-  relativePath: '../',
-  extension: 'jsx',
 };
 
-export const set = (rootOptions) => {
-  config = {
-    ...config,
-    ...rootOptions,
-    fixtures: {
-      ...config.fixtures,
-      ...(rootOptions.fixtures || {}),
-    },
-  };
+export const merge = newConfig => ({
+  fixturesByPropType: {
+    ...config.fixturesByPropType,
+    ...(newConfig.fixturesByPropType || {}),
+  },
+  fixturesByPropKey: {
+    ...config.fixturesByPropKey,
+    ...(newConfig.fixturesByPropKey || {}),
+  },
+});
+
+export const set = (newConfig) => {
+  config = merge(newConfig);
 };
 
 export const get = () => config;

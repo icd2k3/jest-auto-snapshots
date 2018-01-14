@@ -1,15 +1,15 @@
 import { ERROR, logWarning } from './logger';
-import { get as getConfig } from './configure';
 
-const getFixture = ({ name, raw, value }, key, injectedProps) => {
-  const config = getConfig();
-  if (injectedProps && typeof injectedProps[key] !== 'undefined') {
+const getFixture = ({ name, raw, value }, key, config) => {
+  const { fixturesByPropType, fixturesByPropKey } = config;
+
+  if (fixturesByPropKey && typeof fixturesByPropKey[key] !== 'undefined') {
     // check for injected props first from the test runner
-    return injectedProps[key];
-  } else if (config.fixtures && typeof config.fixtures[raw] !== 'undefined') {
+    return fixturesByPropKey[key];
+  } else if (fixturesByPropType && typeof fixturesByPropType[raw] !== 'undefined') {
     // next, check if any root-level proptype handler have been set
     // most common use case would be for custom defined propTypes.
-    return config.fixtures[raw];
+    return fixturesByPropType[raw];
   }
 
   // automatically try to add fixture based on propType
@@ -24,19 +24,19 @@ const getFixture = ({ name, raw, value }, key, injectedProps) => {
     case 'object':
     case 'string':
     case 'symbol':
-      return config.fixtures[name];
+      return fixturesByPropType[name];
     case 'shape':
       return Object.keys(value).reduce((shapeProps, shapePropKey) => ({
         ...shapeProps,
-        [shapePropKey]: getFixture(value[shapePropKey], key, injectedProps),
+        [shapePropKey]: getFixture(value[shapePropKey], key, config),
       }), {});
     case 'enum': // aka oneOf
       return value[0].value;
     case 'arrayOf':
-      return [getFixture(value, key, injectedProps)];
+      return [getFixture(value, key, config)];
     case 'union':
       // cover the first type here (remaining types will be covered in prop variations)
-      return getFixture(value[0], key, injectedProps);
+      return getFixture(value[0], key, config);
     default:
       logWarning(ERROR.PROP_TYPE_UNRECOGNIZED(key, raw));
       return null;
