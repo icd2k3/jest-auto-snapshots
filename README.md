@@ -102,8 +102,8 @@ exports[`when passed only required props 1`] = `
 `;
 ```
 
-## Advanced Examples
-For advanced examples highlighting different use cases, please check out the [examples directory](https://github.com/icd2k3/jest-auto-snapshots/tree/master/examples)
+## More Examples
+For more examples highlighting different use cases, please check out the [examples directory](https://github.com/icd2k3/jest-auto-snapshots/tree/master/examples)
 
 ## API
 ```js
@@ -138,7 +138,9 @@ jestAutoSnapshots.configure({
 });
 ```
 
-For the above example: `'custom fixture'` will be injected for _all_ components with `something: customPropType` in their `propTypes` object. And `{name: 'Joe', age: 30}` will be injected for _all_ components with `user: PropTypes.shape({ /* ... */ })` in their `propTypes` object.
+For the above example:
+- `'custom fixture'` will be injected for _all_ components with `something: customPropType` in their `propTypes` object.
+- `{name: 'Joe', age: 30}` will be injected for _all_ components with `user: PropTypes.shape({ /* ... */ })` in their `propTypes` object.
 
 #### Set Config at the Test Level
 In your test file:
