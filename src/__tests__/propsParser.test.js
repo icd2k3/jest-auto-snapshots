@@ -14,12 +14,12 @@ describe('propsParser', () => {
     });
 
     it('Should log error when component file path is incorrect', () => {
-      expect(() => { propsParser('MockInvalidComponent', { path: '../bad/path' }); })
+      expect(() => { propsParser('MockInvalidComponent', '../bad/path'); })
         .toThrow();
     });
 
     it('Should log error for multiple components if not found', () => {
-      expect(() => { propsParser('ComponentOne', { path: '../../../src/__tests__/MultipleComponentErrorTest.jsx' }); })
+      expect(() => { propsParser('ComponentOne', '../../../src/__tests__/MultipleComponentErrorTest.jsx'); })
         .toThrow();
     });
   });

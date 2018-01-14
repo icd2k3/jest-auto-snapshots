@@ -7,21 +7,15 @@ const findAllExportedComponentDefinitions = require('react-docgen/dist/resolver/
 const fs = require('fs');
 const path = require('path');
 
-const propsParser = (componentName, config = {}) => {
+const propsParser = (componentName, filePath, config) => {
   if (!componentName) {
     logError(ERROR.COMPONENT_INVALID);
   }
 
-  const file = path.resolve(
-    callerCallsite().getFileName(),
-    '../',
-    config.path || `${config.relativePath}${componentName}.${config.extension}`,
-  );
+  const file = path.resolve(callerCallsite().getFileName(), '../', filePath);
 
   if (!fs.existsSync(file)) {
-    return logError(config.path
-      ? ERROR.PATH_INCORRECT(config.path, file)
-      : ERROR.PATH_NOT_FOUND(file));
+    return logError(ERROR.PATH_INCORRECT(filePath, file));
   }
 
   const componentInfo = reactAST.parse(fs.readFileSync(file), findAllExportedComponentDefinitions);
@@ -47,7 +41,7 @@ const propsParser = (componentName, config = {}) => {
     .reduce((obj, key) => {
       const newObj = obj;
       const { type, required } = componentPropInfo[key];
-      newObj[required ? 'required' : 'optional'][key] = getFixture(type, key, config.props);
+      newObj[required ? 'required' : 'optional'][key] = getFixture(type, key, config);
       return newObj;
     }, { required: {}, optional: {} });
 };

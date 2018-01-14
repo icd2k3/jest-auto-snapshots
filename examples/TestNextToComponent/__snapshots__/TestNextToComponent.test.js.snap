@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`jest-auto-snapshots > TestNextToComponent Matches snapshot when passed all props: when passed all props 1`] = `
-<div>
-  jest-auto-snapshots String Fixture
-</div>
-`;

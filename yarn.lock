@@ -490,14 +490,7 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-jest@22.0.4:
-  version "22.0.4"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-22.0.4.tgz#533c46de37d7c9d7612f408c76314be9277e0c26"
-  dependencies:
-    babel-plugin-istanbul "^4.1.5"
-    babel-preset-jest "^22.0.3"
-
-babel-jest@^22.0.6:
+babel-jest@22.0.6, babel-jest@^22.0.6:
   version "22.0.6"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-22.0.6.tgz#807a2a5f5fad7789c57174a955cd14b11045299f"
   dependencies:
@@ -910,7 +903,7 @@ babel-preset-flow@^6.23.0:
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
-babel-preset-jest@^22.0.3, babel-preset-jest@^22.0.6:
+babel-preset-jest@^22.0.6:
   version "22.0.6"
   resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-22.0.6.tgz#d13202533db9495c98663044d9f51b273d3984c8"
   dependencies:
@@ -2521,7 +2514,7 @@ jest-changed-files@^22.0.6:
   dependencies:
     throat "^4.0.0"
 
-jest-cli@^22.0.4:
+jest-cli@^22.0.6:
   version "22.0.6"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-22.0.6.tgz#a2f1e5e094c42b29d22815463ae57f4d07e292ac"
   dependencies:
@@ -2755,11 +2748,11 @@ jest-worker@^22.0.6:
   dependencies:
     merge-stream "^1.0.1"
 
-jest@22.0.4:
-  version "22.0.4"
-  resolved "https://registry.yarnpkg.com/jest/-/jest-22.0.4.tgz#d3cf560ece6b825b115dce80b9826ceb40f87961"
+jest@22.0.6:
+  version "22.0.6"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-22.0.6.tgz#0d0d3bdc402c43cf5a3eae58a55cff6da8b6820f"
   dependencies:
-    jest-cli "^22.0.4"
+    jest-cli "^22.0.6"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"

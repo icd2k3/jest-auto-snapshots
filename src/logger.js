@@ -3,14 +3,8 @@ import colors from 'colors/safe';
 const prepend = 'jest-auto-snapshots';
 
 export const ERROR = Object.freeze({
-  PATH_NOT_FOUND: file => `
-    Component file
-    ${file}
-    could not be found. You may need to set the \`options.path\` parameter
-    \`snap(Component, { path: '../../path/to/Component.jsx' })\`
-    `,
-  PATH_INCORRECT: (optionsPath, file) => `
-    Component file ${optionsPath} could not be found. Please
+  PATH_INCORRECT: (filePath, file) => `
+    Component file ${filePath} could not be found. Please
     ensure your path is correct:
     ${file}
     `,

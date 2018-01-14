@@ -1,4 +1,4 @@
 import ComponentWithoutProps from '../ComponentWithoutProps';
 import snap from 'jest-auto-snapshots';
 
-snap(ComponentWithoutProps);
+snap(ComponentWithoutProps, '../ComponentWithoutProps.jsx');

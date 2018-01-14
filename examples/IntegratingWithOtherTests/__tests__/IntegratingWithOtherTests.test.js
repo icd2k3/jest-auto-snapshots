@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import IntegratingWithOtherTests from '../IntegratingWithOtherTests';
 
 describe('IntegratingWithOtherTests', () => {
-  snap(IntegratingWithOtherTests);
+  snap(IntegratingWithOtherTests, '../IntegratingWithOtherTests.jsx');
 
   describe('When button is clicked', () => {
     it('Should add a click', () => {
