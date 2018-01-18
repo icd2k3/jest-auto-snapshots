@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users" has one item: "[object Object]": when array prop "users" has one item: "[object Object]" 1`] = `
+exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users" has one item: "[object Object]" 1`] = `
 <div>
   <div
     key="jest-auto-snapshots String Fixture"
@@ -28,7 +28,7 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users
 </div>
 `;
 
-exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users" is an empty array: "[]": when array prop "users" is an empty array: "[]" 1`] = `
+exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users" is an empty array: "[]" 1`] = `
 <div>
   <span>
     jest-auto-snapshots String Fixture
@@ -36,7 +36,7 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users
 </div>
 `;
 
-exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props: when passed all props 1`] = `
+exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props 1`] = `
 <div>
   <div
     key="jest-auto-snapshots String Fixture"
@@ -64,7 +64,7 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props:
 </div>
 `;
 
-exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed only required props: when passed only required props 1`] = `
+exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed only required props 1`] = `
 <div>
   <div
     key="jest-auto-snapshots String Fixture"
