@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "sayHello" is set to: "false": when boolean prop "sayHello" is set to: "false" 1`] = `
+exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "sayHello" is set to: "false" 1`] = `
 <div>
   <h1>
     jest-auto-snapshots String Fixture
@@ -19,7 +19,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "
 </div>
 `;
 
-exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all props: when passed all props 1`] = `
+exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all props 1`] = `
 <div>
   <h1>
     jest-auto-snapshots String Fixture
@@ -41,7 +41,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all pro
 </div>
 `;
 
-exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed only required props: when passed only required props 1`] = `
+exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed only required props 1`] = `
 <div>
   <h1>
     jest-auto-snapshots String Fixture

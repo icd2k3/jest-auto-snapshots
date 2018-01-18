@@ -2,7 +2,7 @@ import { createElement } from 'react';
 import { shallow } from 'enzyme';
 
 export const shapshotTest = (Component, props, str) => it(`Matches snapshot ${str}`, () => {
-  expect(shallow(createElement(Component, props))).toMatchSnapshot(str);
+  expect(shallow(createElement(Component, props))).toMatchSnapshot();
 });
 
 /**
