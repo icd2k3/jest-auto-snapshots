@@ -18,7 +18,13 @@ snap(MyComponent, '../MyComponent.jsx');
 
 ↓
 
-![ex](https://www.dropbox.com/s/dqzdam8st4yfuxg/Screenshot%202018-01-07%2011.46.34.png?raw=1)
+```
+ PASS  examples/MyComponent/__tests__/MyComponent.test.js
+  jest-auto-snapshots > MyComponent
+    ✓ Matches snapshot when passed only required props (3ms)
+    ✓ Matches snapshot when passed all props (2ms)
+    ✓ Matches snapshot when boolean prop "booleanProp" is set to: "false" (1ms)
+```
 
 ## Why?
 > [Snapshot tests](https://facebook.github.io/jest/docs/en/snapshot-testing.html) are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
