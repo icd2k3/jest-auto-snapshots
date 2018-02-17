@@ -15,7 +15,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "
   </button>
   jest-auto-snapshots String Fixture
   1
-  'News'
+  News
 </div>
 `;
 
@@ -37,7 +37,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all pro
   </button>
   jest-auto-snapshots String Fixture
   1
-  'News'
+  News
 </div>
 `;
 
@@ -55,6 +55,6 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed only re
     button
   </button>
   999
-  'News'
+  News
 </div>
 `;

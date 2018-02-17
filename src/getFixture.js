@@ -31,7 +31,7 @@ const getFixture = ({ name, raw, value }, key, config) => {
         [shapePropKey]: getFixture(value[shapePropKey], key, config),
       }), {});
     case 'enum': // aka oneOf
-      return value[0].value;
+      return value[0].value.slice(1, -1);
     case 'arrayOf':
       return [getFixture(value, key, config)];
     case 'union':
