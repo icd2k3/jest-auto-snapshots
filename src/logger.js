@@ -13,7 +13,7 @@ export const ERROR = Object.freeze({
   `,
   MULTIPLE_COMPONENTS_NOT_FOUND: (name, file) => `
     The Component \`name\` could not be found in:
-    \`${file}\`.
+    '${file}'.
 
     It looks like there are multiple exported components in this file.
     In this case you probably need to add a comment above your component definition:
@@ -24,10 +24,10 @@ export const ERROR = Object.freeze({
     This is due to a limitation in react-docgen to be able to parse this Component's propTypes.
   `,
   PROP_TYPE_UNRECOGNIZED: (key, raw) => `
-    The prop \`${key}\` of type \`${raw}\` is unrecognized.
+    The prop '${key}' of type '${raw}' is unrecognized.
     To fix this warning you can either inject the prop in the test:
 
-    \`snap(Component, { props: { ${key}: 'value' } })\`
+    \`snap(Component, ../Component.jsx, { fixturesByPropType: { ${raw}: 'value' } })\`
 
     or define a root-level prop fixture handler (see readme)
   `,

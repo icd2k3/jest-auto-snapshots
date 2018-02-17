@@ -1,6 +1,6 @@
 {
   "name": "jest-auto-snapshots",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Fully automated Jest snapshot tests for React components",
   "main": "./dist/index.js",
   "repository": "git@github.com:icd2k3/jest-auto-snapshots.git",
@@ -49,7 +49,7 @@
     "prepublishOnly": "npm run build",
     "build": "babel src --out-dir dist",
     "install-hooks": "git config core.hooksPath .githooks",
-    "test": "NODE_ENV=test && ./node_modules/.bin/jest --config=./jest.config.js --verbose",
+    "test": "NODE_ENV=test && ./node_modules/.bin/jest --config=./jest.config.js",
     "lint": "./node_modules/.bin/eslint './src/**/*.js' './examples/**/*.js' './examples/**/*.jsx'",
     "travis": "jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   }
