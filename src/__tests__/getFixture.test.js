@@ -11,41 +11,37 @@ describe('getFixture', () => {
 
   describe('custom fixture prop type', () => {
     it('Should return the correct fixture', () => {
-      expect(
-        getFixture(
-          {
-            name: 'mockCustomPropType',
-            key: 'key', 
-            raw: 'mockCustomPropType',
+      expect(getFixture(
+        {
+          name: 'mockCustomPropType',
+          key: 'key',
+          raw: 'mockCustomPropType',
+        },
+        'key',
+        mergeConfig({
+          fixturesByPropType: {
+            mockCustomPropType: 'mockCustomFixture',
           },
-          'key',
-          mergeConfig({
-            fixturesByPropType: {
-              mockCustomPropType: 'mockCustomFixture',
-            },
-          }),
-        ),
-      ).toBe('mockCustomFixture');
+        }),
+      )).toBe('mockCustomFixture');
     });
   });
 
   describe('custom fixture prop key', () => {
     it('Should return the correct fixture', () => {
-      expect(
-        getFixture(
-          {
-            name: 'string',
-            key: 'mockKey', 
-            raw: 'string',
+      expect(getFixture(
+        {
+          name: 'string',
+          key: 'mockKey',
+          raw: 'string',
+        },
+        'mockKey',
+        mergeConfig({
+          fixturesByPropKey: {
+            mockKey: 'mockCustomKeyFixture',
           },
-          'mockKey',
-          mergeConfig({
-            fixturesByPropKey: {
-              mockKey: 'mockCustomKeyFixture',
-            },
-          }),
-        ),
-      ).toBe('mockCustomKeyFixture');
+        }),
+      )).toBe('mockCustomKeyFixture');
     });
   });
 });
