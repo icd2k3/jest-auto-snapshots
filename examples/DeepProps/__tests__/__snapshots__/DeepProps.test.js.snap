@@ -61,6 +61,39 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "optio
 </div>
 `;
 
+exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users" has one item: "[object Object]" 1`] = `
+<div>
+  <div
+    key="jest-auto-snapshots String Fixture"
+  >
+    <h1>
+      jest-auto-snapshots String Fixture
+       
+      jest-auto-snapshots String Fixture
+    </h1>
+    <div
+      key="1"
+    >
+      <h2>
+        1
+      </h2>
+      <span>
+        $
+        jest-auto-snapshots String Fixture
+      </span>
+    </div>
+  </div>
+  <span
+    key="jest-auto-snapshots String Fixture"
+  >
+    s
+  </span>
+  <span>
+    jest-auto-snapshots String Fixture
+  </span>
+</div>
+`;
+
 exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props 1`] = `
 <div>
   <div

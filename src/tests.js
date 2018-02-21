@@ -11,11 +11,13 @@ export const shapshotTest = (Component, props, str) => it(`Matches snapshot ${st
  * test with it set to `false`.
  */
 export const possibilities = (Component, allProps, key) => ({
-  array: () => {
-    shapshotTest(Component, {
-      ...allProps,
-      [key]: [],
-    }, `when array prop "${key}" is an empty array: "[]"`);
+  array: (isRequired) => {
+    if (!isRequired) {
+      shapshotTest(Component, {
+        ...allProps,
+        [key]: [],
+      }, `when array prop "${key}" is an empty array: "[]"`);
+    }
     shapshotTest(Component, allProps, `when array prop "${key}" has one item: "${allProps[key]}"`);
   },
   boolean: () => {
@@ -51,8 +53,8 @@ const tests = (Component, { required, optional }) => {
       const testPossibilities = possibilities(Component, allProps, key);
       if (typeof allProps[key] === 'boolean') {
         testPossibilities.boolean();
-      } else if (Array.isArray(allProps[key]) && !required[key]) {
-        testPossibilities.array();
+      } else if (Array.isArray(allProps[key])) {
+        testPossibilities.array(required[key]);
       }
     });
   });
