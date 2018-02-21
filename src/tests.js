@@ -51,7 +51,7 @@ const tests = (Component, { required, optional }) => {
       const testPossibilities = possibilities(Component, allProps, key);
       if (typeof allProps[key] === 'boolean') {
         testPossibilities.boolean();
-      } else if (Array.isArray(allProps[key])) {
+      } else if (Array.isArray(allProps[key]) && !required[key]) {
         testPossibilities.array();
       }
     });
