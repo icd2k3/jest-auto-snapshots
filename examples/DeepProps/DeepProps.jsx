@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DeepProps = ({
+  optionalArray,
   total,
   users,
 }) => (
@@ -17,6 +18,7 @@ const DeepProps = ({
         ))}
       </div>
     ))}
+    {optionalArray && optionalArray.map(s => <span key={s}>s</span>)}
     <span>
       {total}
     </span>
@@ -24,6 +26,7 @@ const DeepProps = ({
 );
 
 DeepProps.propTypes = {
+  optionalArray: PropTypes.arrayOf(PropTypes.string),
   users: PropTypes.arrayOf(PropTypes.shape({
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
