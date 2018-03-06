@@ -29,7 +29,7 @@ snap(MyComponent, '../MyComponent.jsx');
 ## Why?
 > [Snapshot tests](https://facebook.github.io/jest/docs/en/snapshot-testing.html) are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
 
-`jest` and `enzyme-to-json` are great tools, but writing tests for all the different possible rendering states and maintaining props is tedious and unnecessary.
+`jest` and `enzyme-to-json` are fantastic tools, but writing tests for all the different possible rendering states and maintaining props is tedious.
 
 Really, we just want to know when & where a component snapshot changes and if that change was intentional.
 
