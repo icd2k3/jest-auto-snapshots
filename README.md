@@ -77,7 +77,7 @@ MyComponent.propTypes = {
 import snap from 'jest-auto-snapshots';
 import MyComponent from '../MyComponent';
 
-snap(MyComponent);
+snap(MyComponent, '../MyComponent.jsx');
 ```
 
 #### `MyComponent.test.js.snap` (generated from the example code above)
