@@ -4,6 +4,7 @@ exports[`IntegratingWithOtherTests When button is clicked Should add a click 1`]
 <div>
   <button
     onClick={[Function]}
+    type="button"
   >
     Click Me
   </button>
@@ -19,6 +20,7 @@ exports[`IntegratingWithOtherTests jest-auto-snapshots > IntegratingWithOtherTes
 <div>
   <button
     onClick={[Function]}
+    type="button"
   >
     Click Me
   </button>

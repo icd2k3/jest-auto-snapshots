@@ -1,11 +1,5 @@
 import React from 'react';
-
-const customPropType = (props, propName) => {
-  if (!/customproptest/.test(props[propName])) {
-    return new Error('invalid custom prop');
-  }
-  return null;
-};
+import customPropType from './customPropType';
 
 const CustomProps = ({
   customProp,

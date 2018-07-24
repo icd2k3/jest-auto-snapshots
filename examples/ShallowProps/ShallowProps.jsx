@@ -13,10 +13,21 @@ const ShallowProps = ({
   title,
 }) => (
   <div>
-    <h1>{title}</h1>
-    {sayHello && <span>Hello!</span>}
-    <div>{children}</div>
-    <button onClick={onClick}>
+    <h1>
+      {title}
+    </h1>
+    {sayHello && (
+      <span>
+        Hello!
+      </span>
+    )}
+    <div>
+      {children}
+    </div>
+    <button
+      type="button"
+      onClick={onClick}
+    >
       button
     </button>
     {any}

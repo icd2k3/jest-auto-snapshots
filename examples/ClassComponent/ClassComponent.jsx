@@ -13,8 +13,16 @@ export default class ClassComponent extends Component {
     return (
       <div>
         {sayHello
-          ? <span>Hello</span>
-          : <span>Goodbye</span>
+          ? (
+            <span>
+              Hello
+            </span>
+          )
+          : (
+            <span>
+              Goodbye
+            </span>
+          )
         }
       </div>
     );

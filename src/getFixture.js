@@ -6,7 +6,9 @@ const getFixture = ({ name, raw, value }, key, config) => {
   if (fixturesByPropKey && typeof fixturesByPropKey[key] !== 'undefined') {
     // check for injected props first from the test runner
     return fixturesByPropKey[key];
-  } else if (fixturesByPropType && typeof fixturesByPropType[raw] !== 'undefined') {
+  }
+
+  if (fixturesByPropType && typeof fixturesByPropType[raw] !== 'undefined') {
     // next, check if any root-level proptype handler have been set
     // most common use case would be for custom defined propTypes.
     return fixturesByPropType[raw];
