@@ -6,6 +6,9 @@
   "repository": "git@github.com:icd2k3/jest-auto-snapshots.git",
   "author": "JUSTIN SCHRADER <icd2k3@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "8.11.3"
+  },
   "peerDependencies": {
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
