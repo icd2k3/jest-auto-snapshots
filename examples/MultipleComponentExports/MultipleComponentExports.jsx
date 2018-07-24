@@ -11,7 +11,9 @@ import PropTypes from 'prop-types';
 
 /** ComponentOne */
 export const ComponentOne = ({ title }) => (
-  <span>{title}</span>
+  <span>
+    {title}
+  </span>
 );
 
 ComponentOne.propTypes = {
@@ -20,7 +22,9 @@ ComponentOne.propTypes = {
 
 /** ComponentTwo */
 export const ComponentTwo = ({ number }) => (
-  <span>{number}</span>
+  <span>
+    {number}
+  </span>
 );
 
 ComponentTwo.propTypes = {

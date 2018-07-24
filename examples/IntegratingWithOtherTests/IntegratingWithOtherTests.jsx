@@ -26,9 +26,17 @@ export default class IntegratingWithOtherTests extends PureComponent {
 
     return (
       <div>
-        <button onClick={this.handleClick}>Click Me</button>
-        {label}:
-        <span>{clicks}</span>
+        <button
+          onClick={this.handleClick}
+          type="button"
+        >
+          Click Me
+        </button>
+        {label}
+        :
+        <span>
+          {clicks}
+        </span>
       </div>
     );
   }

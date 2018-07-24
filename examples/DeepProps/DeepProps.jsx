@@ -9,16 +9,29 @@ const DeepProps = ({
   <div>
     {users.map(({ firstName, lastName, cartItems }) => (
       <div key={firstName}>
-        <h1>{firstName} {lastName}</h1>
+        <h1>
+          {firstName}
+          {' '}
+          {lastName}
+        </h1>
         {cartItems && cartItems.map(({ cost, title }) => (
           <div key={title}>
-            <h2>{title}</h2>
-            <span>${cost}</span>
+            <h2>
+              {title}
+            </h2>
+            <span>
+              $
+              {cost}
+            </span>
           </div>
         ))}
       </div>
     ))}
-    {optionalArray && optionalArray.map(s => <span key={s}>s</span>)}
+    {optionalArray && optionalArray.map(s => (
+      <span key={s}>
+        s
+      </span>
+    ))}
     <span>
       {total}
     </span>

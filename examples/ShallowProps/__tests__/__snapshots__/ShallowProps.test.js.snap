@@ -10,6 +10,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "
   </div>
   <button
     onClick={[MockFunction]}
+    type="button"
   >
     button
   </button>
@@ -32,6 +33,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all pro
   </div>
   <button
     onClick={[MockFunction]}
+    type="button"
   >
     button
   </button>
@@ -51,6 +53,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed only re
   </div>
   <button
     onClick={[MockFunction]}
+    type="button"
   >
     button
   </button>
