@@ -10,9 +10,6 @@
     "node": ">= 8.11.3"
   },
   "peerDependencies": {
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "enzyme-to-json": "^3.2.2",
     "jest": ">= 21.2.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
@@ -32,9 +29,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "coveralls": "^3.0.2",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "enzyme-to-json": "^3.3.4",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
@@ -46,7 +40,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "recompose": "^0.27.1"
+    "react-test-renderer": "^16.5.0"
   },
   "scripts": {
     "prepublishOnly": "npm run build",

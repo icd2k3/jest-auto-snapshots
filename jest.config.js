@@ -10,8 +10,6 @@ module.exports = {
       statements: 100,
     },
   },
-  setupFiles: ['./jest.setup.js'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   testMatch: ['**/*.test.js?(x)'],
   verbose: false,
 };

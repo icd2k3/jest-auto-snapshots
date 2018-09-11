@@ -1,11 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import { set, get, NodeFixture } from '../configure.js';
 
 describe('configure', () => {
   describe('NodeFixture', () => {
     it('Should match snapshot', () => {
-      expect(shallow(<NodeFixture />)).toMatchSnapshot();
+      const tree = renderer.create(<NodeFixture />).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 

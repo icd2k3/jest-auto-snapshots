@@ -1,6 +1,6 @@
 import React from 'react';
 import snap from 'jest-auto-snapshots';
-import { shallow } from 'enzyme';
+import ReactTestUtils from 'react-dom/test-utils';
 import IntegratingWithOtherTests from '../IntegratingWithOtherTests';
 
 describe('IntegratingWithOtherTests', () => {
@@ -8,9 +8,11 @@ describe('IntegratingWithOtherTests', () => {
 
   describe('When button is clicked', () => {
     it('Should add a click', () => {
-      const wrapper = shallow(<IntegratingWithOtherTests label="label" />);
-      wrapper.find('button').simulate('click');
-      expect(wrapper).toMatchSnapshot();
+      const onClick = jest.fn();
+      const wrapper = ReactTestUtils.renderIntoDocument(<IntegratingWithOtherTests label="label" onClick={onClick} />);
+      const button = ReactTestUtils.findRenderedDOMComponentWithTag(wrapper, 'button');
+      ReactTestUtils.Simulate.click(button);
+      expect(onClick).toHaveBeenCalled();
     });
   });
 
