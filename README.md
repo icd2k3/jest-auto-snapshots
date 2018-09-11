@@ -29,13 +29,19 @@ snap(MyComponent, '../MyComponent.jsx');
 ## Why?
 > [Snapshot tests](https://facebook.github.io/jest/docs/en/snapshot-testing.html) are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
 
-`jest` and `enzyme-to-json` are fantastic tools, but writing tests for all the different possible rendering states and maintaining props is tedious.
+`jest` and `react-test-renderer` are fantastic tools, but writing tests for all the different possible rendering states and maintaining props is tedious. Really, we just want to know when & where a component snapshot changes and if that change was intentional.
 
-Really, we just want to know when & where a component snapshot changes and if that change was intentional.
+For example, take the following simple component: `<MyComponent active />`. In order to make sure `MyComponent` is fully covered in snapshot tests, we would have to write (and maintain) _two_ separate tests for the boolean `active` state.
 
-#### What this script does (or aspires to do):
-- Save time when writing simple A -> B rendering tests.
-- Automatically update, add, and remove snapshot tests when component props change.
+`jest-auto-snapshots` can detect the different prop types your component uses and _create_ those shapshot tests for you!
+
+If `MyComponent`'s props ever get changed/added/removed `jest-auto-snapshots` will just create and run new snapshot tests.
+
+See the bigger [example below](https://github.com/icd2k3/jest-auto-snapshots#example) for more info.
+
+#### What this does (or aspires to do):
+- Save you time when writing simple A -> B rendering tests.
+- Automatically update, add, and remove snapshot tests when your component props change.
 - Ensure that all possible component rendering states are covered.
 
 #### What it doesn't do:
@@ -48,11 +54,10 @@ Really, we just want to know when & where a component snapshot changes and if th
   2. Parses your `Component.propTypes` tree and checks for different conditions (required vs optional props, boolean props, etc).
   3. Generates fixtures and tests based on the data above.
 
-## Setup
-**Important:** This module requires [jest](https://facebook.github.io/jest/), [enzyme](https://github.com/airbnb/enzyme), and [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json) to be correctly configured and working in your project. `jest-auto-snapshots` is supplemental to these tools and does not provide them for you.
-
 #### Install
-`npm i jest-auto-snapshots --save-dev` or `yarn add jest-auto-snapshots --dev`
+`yarn add jest-auto-snapshots --dev`
+or
+`npm i jest-auto-snapshots --save-dev`
 
 ## Example
 #### `MyComponent.jsx`

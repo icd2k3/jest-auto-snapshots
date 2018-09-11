@@ -11,5 +11,5 @@ module.exports = {
     },
   },
   testMatch: ['**/*.test.js?(x)'],
-  verbose: false,
+  verbose: true,
 };
