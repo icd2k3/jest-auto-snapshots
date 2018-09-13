@@ -6,9 +6,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "
     jest-auto-snapshots String Fixture
   </h1>
   <div>
-    <span>
-      jest-auto-snapshots Node Fixture
-    </span>
+    <NodeFixture />
   </div>
   <button
     onClick={[MockFunction]}
@@ -18,6 +16,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when boolean prop "
   </button>
   jest-auto-snapshots String Fixture
   1
+  Symbol(jest-auto-snapshots String Fixture)
   News
 </div>
 `;
@@ -31,9 +30,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all pro
     Hello!
   </span>
   <div>
-    <span>
-      jest-auto-snapshots Node Fixture
-    </span>
+    <NodeFixture />
   </div>
   <button
     onClick={[MockFunction]}
@@ -43,6 +40,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed all pro
   </button>
   jest-auto-snapshots String Fixture
   1
+  Symbol(jest-auto-snapshots String Fixture)
   News
 </div>
 `;
@@ -53,9 +51,7 @@ exports[`jest-auto-snapshots > ShallowProps Matches snapshot when passed only re
     jest-auto-snapshots String Fixture
   </h1>
   <div>
-    <span>
-      jest-auto-snapshots Node Fixture
-    </span>
+    <NodeFixture />
   </div>
   <button
     onClick={[MockFunction]}

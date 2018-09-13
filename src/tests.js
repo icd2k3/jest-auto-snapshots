@@ -1,8 +1,10 @@
 import { createElement } from 'react';
-import renderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 export const shapshotTest = (Component, props, str) => it(`Matches snapshot ${str}`, () => {
-  expect(renderer.create(createElement(Component, props)).toJSON()).toMatchSnapshot();
+  const renderer = new ShallowRenderer();
+  renderer.render(createElement(Component, props));
+  expect(renderer.getRenderOutput()).toMatchSnapshot();
 });
 
 /**

@@ -3,9 +3,7 @@
 exports[`jest-auto-snapshots > MyComponent Matches snapshot when boolean prop "booleanProp" is set to: "false" 1`] = `
 <div>
   jest-auto-snapshots String Fixture
-  <span>
-    jest-auto-snapshots Node Fixture
-  </span>
+  <NodeFixture />
 </div>
 `;
 
@@ -15,9 +13,7 @@ exports[`jest-auto-snapshots > MyComponent Matches snapshot when passed all prop
     Hello
   </span>
   jest-auto-snapshots String Fixture
-  <span>
-    jest-auto-snapshots Node Fixture
-  </span>
+  <NodeFixture />
 </div>
 `;
 
