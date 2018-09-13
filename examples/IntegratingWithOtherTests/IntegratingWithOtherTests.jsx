@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export default class IntegratingWithOtherTests extends PureComponent {
   static propTypes = {
     label: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
   };
 
   constructor() {
@@ -17,7 +18,10 @@ export default class IntegratingWithOtherTests extends PureComponent {
 
   handleClick() {
     const { clicks } = this.state;
+    const { onClick } = this.props;
+
     this.setState({ clicks: clicks + 1 });
+    onClick();
   }
 
   render() {

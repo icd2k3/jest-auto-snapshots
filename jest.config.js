@@ -10,8 +10,9 @@ module.exports = {
       statements: 100,
     },
   },
-  setupFiles: ['./jest.setup.js'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  moduleNameMapper: {
+    '^jest-auto-snapshots$': '<rootDir>/src/index.js',
+  },
   testMatch: ['**/*.test.js?(x)'],
-  verbose: false,
+  verbose: true,
 };

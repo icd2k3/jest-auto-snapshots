@@ -1,21 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IntegratingWithOtherTests When button is clicked Should add a click 1`] = `
-<div>
-  <button
-    onClick={[Function]}
-    type="button"
-  >
-    Click Me
-  </button>
-  label
-  :
-  <span>
-    1
-  </span>
-</div>
-`;
-
 exports[`IntegratingWithOtherTests jest-auto-snapshots > IntegratingWithOtherTests Matches snapshot when passed only required props 1`] = `
 <div>
   <button

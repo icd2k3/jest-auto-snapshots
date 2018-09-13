@@ -1,8 +1,8 @@
 import { createElement } from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 export const shapshotTest = (Component, props, str) => it(`Matches snapshot ${str}`, () => {
-  expect(shallow(createElement(Component, props))).toMatchSnapshot();
+  expect(renderer.create(createElement(Component, props)).toJSON()).toMatchSnapshot();
 });
 
 /**

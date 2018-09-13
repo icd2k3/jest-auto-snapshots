@@ -2,17 +2,13 @@
 
 exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "optionalArray" has one item: "jest-auto-snapshots String Fixture" 1`] = `
 <div>
-  <div
-    key="jest-auto-snapshots String Fixture"
-  >
+  <div>
     <h1>
       jest-auto-snapshots String Fixture
        
       jest-auto-snapshots String Fixture
     </h1>
-    <div
-      key="1"
-    >
+    <div>
       <h2>
         1
       </h2>
@@ -22,9 +18,7 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "optio
       </span>
     </div>
   </div>
-  <span
-    key="jest-auto-snapshots String Fixture"
-  >
+  <span>
     s
   </span>
   <span>
@@ -35,17 +29,13 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "optio
 
 exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "optionalArray" is an empty array: "[]" 1`] = `
 <div>
-  <div
-    key="jest-auto-snapshots String Fixture"
-  >
+  <div>
     <h1>
       jest-auto-snapshots String Fixture
        
       jest-auto-snapshots String Fixture
     </h1>
-    <div
-      key="1"
-    >
+    <div>
       <h2>
         1
       </h2>
@@ -63,17 +53,13 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "optio
 
 exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users" has one item: "[object Object]" 1`] = `
 <div>
-  <div
-    key="jest-auto-snapshots String Fixture"
-  >
+  <div>
     <h1>
       jest-auto-snapshots String Fixture
        
       jest-auto-snapshots String Fixture
     </h1>
-    <div
-      key="1"
-    >
+    <div>
       <h2>
         1
       </h2>
@@ -83,9 +69,7 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users
       </span>
     </div>
   </div>
-  <span
-    key="jest-auto-snapshots String Fixture"
-  >
+  <span>
     s
   </span>
   <span>
@@ -96,17 +80,13 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when array prop "users
 
 exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props 1`] = `
 <div>
-  <div
-    key="jest-auto-snapshots String Fixture"
-  >
+  <div>
     <h1>
       jest-auto-snapshots String Fixture
        
       jest-auto-snapshots String Fixture
     </h1>
-    <div
-      key="1"
-    >
+    <div>
       <h2>
         1
       </h2>
@@ -116,9 +96,7 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props 
       </span>
     </div>
   </div>
-  <span
-    key="jest-auto-snapshots String Fixture"
-  >
+  <span>
     s
   </span>
   <span>
@@ -129,17 +107,13 @@ exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed all props 
 
 exports[`jest-auto-snapshots > DeepProps Matches snapshot when passed only required props 1`] = `
 <div>
-  <div
-    key="jest-auto-snapshots String Fixture"
-  >
+  <div>
     <h1>
       jest-auto-snapshots String Fixture
        
       jest-auto-snapshots String Fixture
     </h1>
-    <div
-      key="1"
-    >
+    <div>
       <h2>
         1
       </h2>
