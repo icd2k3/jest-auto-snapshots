@@ -10,6 +10,9 @@ module.exports = {
       statements: 100,
     },
   },
+  moduleNameMapper: {
+    '^jest-auto-snapshots$': '<rootDir>/src/index.js',
+  },
   testMatch: ['**/*.test.js?(x)'],
   verbose: true,
 };
